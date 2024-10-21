@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "data-engineer-assessment"
+version = "0.1.0"
+description = "Data integration assessment for data engineer role."
+authors = ["Carlos Pimentel <costa.pimentel@ubi.pt>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

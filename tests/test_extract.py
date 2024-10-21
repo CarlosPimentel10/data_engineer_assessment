@@ -10,6 +10,9 @@ class TestExtract():
         url = BASE_URL
         response = requests.get(url)
         assert response.status_code == 200
+    
+    def test_download_xml():
+        pass
 
 
 test_extract = TestExtract()

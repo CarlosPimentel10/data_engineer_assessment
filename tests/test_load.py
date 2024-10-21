@@ -2,7 +2,12 @@ import pytest
 
 
 
-class TestExtract():
+class TestLoad():
     
-    def __init__(self) -> None:
-        pass
+    pass
+
+
+
+
+
+test_load = TestLoad()

@@ -1,8 +1,6 @@
-import pytest
 
 
+class Extract():
 
-class TestExtract():
-    
     def __init__(self) -> None:
         pass

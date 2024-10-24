@@ -1,6 +1,6 @@
-
+from config.config import BASE_URL
 
 class Transform():
 
     def __init__(self) -> None:
-        pass
+        self.url = BASE_URL

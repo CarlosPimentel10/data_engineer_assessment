@@ -4,6 +4,7 @@ from unittest.mock import patch
 from config.config import BASE_URL
 from data_engineer_assessment.extract.extract import Extract
 import os
+import time
 
 
 class TestExtract():
@@ -32,6 +33,8 @@ class TestExtract():
         with open('esma_europa.xml', 'rb') as f:
             file_content = f.read()
             assert file_content == mock_response.content
+        # Delay before cleanup to ensure file created
+        time.sleep(10)
 
         if os.path.exists('esma_europa.xml'):
             os.remove('esma_europa.xml')

@@ -9,5 +9,3 @@ class TestTransform():
 
 
 
-
-test_transform = TestTransform()

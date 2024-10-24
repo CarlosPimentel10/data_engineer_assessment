@@ -8,7 +8,9 @@ import numpy as np
 
 class Extract():
 
-    def __init__(self, url) -> None:
+    """This is the starting point to parse the url, confirm success response and write xml file to local system"""
+
+    def __init__(self) -> None:
         self.url = BASE_URL
 
     def source_url(self):
@@ -23,6 +25,10 @@ class Extract():
     def download_xml(self):
         response = requests.get(self.BASE_URL)
         if response.status_code == 200:
-            with open(BASE_URL, 'wb') as local_file:
-                soup = BeautifulSoup(response.content, 'lxml')
+            with open('esma_europa.xml', 'wb') as local_file:
                 local_file.write(response.content)
+
+            return True
+        else:
+            f'Failed to download xml {response.status_code}'
+            return False
